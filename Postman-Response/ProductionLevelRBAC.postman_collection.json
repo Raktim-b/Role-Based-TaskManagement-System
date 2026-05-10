@@ -1,0 +1,522 @@
+{
+  "info": {
+    "_postman_id": "4e909e60-5977-4429-8638-9b79a2120d19",
+    "name": "ProductionLevelRBAC",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "_exporter_id": "52310874",
+    "_collection_link": "https://go.postman.co/collection/52310874-4e909e60-5977-4429-8638-9b79a2120d19?source=collection_link"
+  },
+  "item": [
+    {
+      "name": "New Request",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n    \"name\": \"Raktim\",\r\n    \"email\": \"raktim@gmail.com\",\r\n    \"password\": \"123456\"\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:4013/auth/admin-register",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "4013",
+          "path": [
+            "auth",
+            "admin-register"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "New Request",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n    \"email\": \"bruce@gmail.com\",\r\n    \"password\": \"123456\"\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:4013/auth/login",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "4013",
+          "path": [
+            "auth",
+            "login"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "http://localhost:4013/user/create-user",
+      "request": {
+        "auth": {
+          "type": "noauth"
+        },
+        "method": "POST",
+        "header": [
+          {
+            "key": "Authorization",
+            "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY5ZmYwMTVkYjk4MmZmNTM3NDBmYjA3NiIsIm5hbWUiOiJSYWt0aW0iLCJlbWFpbCI6InJha3RpbUBnbWFpbC5jb20iLCJyb2xlIjoiYWRtaW4iLCJpYXQiOjE3NzgzMjEyNzMsImV4cCI6MTc3ODQwNzY3M30.JA9whgbBoeKb3WLOPzTdo1NpeSmAuVRKTXUItp5M0sQ",
+            "type": "text"
+          }
+        ],
+        "body": {
+          "mode": "formdata",
+          "formdata": [
+            {
+              "key": "name",
+              "value": "Smith",
+              "type": "text",
+              "uuid": "01472ea5-5d61-49f5-85e7-3d83d92cfb1d"
+            },
+            {
+              "key": "email",
+              "value": "smith@gmail.com",
+              "type": "text",
+              "uuid": "e420e819-1f68-4d18-a828-13a7103d30d4"
+            },
+            {
+              "key": "password",
+              "value": "123456",
+              "type": "text",
+              "uuid": "83b4093e-7090-41cb-a1e0-131dc53d9e1a"
+            },
+            {
+              "key": "role",
+              "value": "manager",
+              "type": "text",
+              "uuid": "2edd0e33-2cfd-46de-8411-38235bac2e4b"
+            },
+            {
+              "key": "phone",
+              "value": "93428162738",
+              "type": "text",
+              "uuid": "0da29b84-4369-4922-abea-81cf2c3f81f0"
+            },
+            {
+              "key": "avatar",
+              "type": "file",
+              "uuid": "bfe7a6a7-cb1e-415e-8074-58689a90c8af",
+              "src": "/C:/Users/rakti/Downloads/download.jpg"
+            }
+          ]
+        },
+        "url": {
+          "raw": "http://localhost:4013/user/create-user",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "4013",
+          "path": [
+            "user",
+            "create-user"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "http://localhost:4013/user/get-user",
+      "request": {
+        "method": "GET",
+        "header": [
+          {
+            "key": "Authorization",
+            "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY5ZmYwMTVkYjk4MmZmNTM3NDBmYjA3NiIsIm5hbWUiOiJSYWt0aW0iLCJlbWFpbCI6InJha3RpbUBnbWFpbC5jb20iLCJyb2xlIjoiYWRtaW4iLCJpYXQiOjE3NzgzNDcxMDMsImV4cCI6MTc3ODQzMzUwM30.HZuAO7GmgkoDw2ZyHVB54WznhgjB5-_eNzGLV2U2_8g",
+            "type": "text"
+          }
+        ],
+        "url": {
+          "raw": "http://localhost:4013/user/get-user",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "4013",
+          "path": [
+            "user",
+            "get-user"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "http://localhost:4013/user/update-user/69ff0704c011a1e443f2fc1e",
+      "request": {
+        "method": "PUT",
+        "header": [
+          {
+            "key": "Authorization",
+            "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY5ZmYwMTVkYjk4MmZmNTM3NDBmYjA3NiIsIm5hbWUiOiJSYWt0aW0iLCJlbWFpbCI6InJha3RpbUBnbWFpbC5jb20iLCJyb2xlIjoiYWRtaW4iLCJpYXQiOjE3NzgzNDcxMDMsImV4cCI6MTc3ODQzMzUwM30.HZuAO7GmgkoDw2ZyHVB54WznhgjB5-_eNzGLV2U2_8g",
+            "type": "text"
+          }
+        ],
+        "body": {
+          "mode": "formdata",
+          "formdata": [
+            {
+              "key": "avatar",
+              "type": "file",
+              "uuid": "e61f23a0-b87e-4072-b4ac-0dfe281ceb12",
+              "src": "/C:/Users/rakti/Downloads/download.jpg"
+            }
+          ]
+        },
+        "url": {
+          "raw": "http://localhost:4013/user/update-user/69ff0704c011a1e443f2fc1e",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "4013",
+          "path": [
+            "user",
+            "update-user",
+            "69ff0704c011a1e443f2fc1e"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "http://localhost:4013/user/delete-user/69ff0795c011a1e443f2fc1f",
+      "request": {
+        "method": "DELETE",
+        "header": [
+          {
+            "key": "Authorization",
+            "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY5ZmYwMTVkYjk4MmZmNTM3NDBmYjA3NiIsIm5hbWUiOiJSYWt0aW0iLCJlbWFpbCI6InJha3RpbUBnbWFpbC5jb20iLCJyb2xlIjoiYWRtaW4iLCJpYXQiOjE3NzgzNDcxMDMsImV4cCI6MTc3ODQzMzUwM30.HZuAO7GmgkoDw2ZyHVB54WznhgjB5-_eNzGLV2U2_8g",
+            "type": "text"
+          }
+        ],
+        "url": {
+          "raw": "http://localhost:4013/user/delete-user/69ff0795c011a1e443f2fc1f",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "4013",
+          "path": [
+            "user",
+            "delete-user",
+            "69ff0795c011a1e443f2fc1f"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "SoftDelete",
+      "request": {
+        "method": "PATCH",
+        "header": [
+          {
+            "key": "Authorization",
+            "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY5ZmYwMTVkYjk4MmZmNTM3NDBmYjA3NiIsIm5hbWUiOiJSYWt0aW0iLCJlbWFpbCI6InJha3RpbUBnbWFpbC5jb20iLCJyb2xlIjoiYWRtaW4iLCJpYXQiOjE3NzgzNDcxMDMsImV4cCI6MTc3ODQzMzUwM30.HZuAO7GmgkoDw2ZyHVB54WznhgjB5-_eNzGLV2U2_8g",
+            "type": "text"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n    \"status\": true\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:4013/user/status-user/69ff0704c011a1e443f2fc1e",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "4013",
+          "path": [
+            "user",
+            "status-user",
+            "69ff0704c011a1e443f2fc1e"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "http://localhost:4013/task/create-task",
+      "request": {
+        "auth": {
+          "type": "noauth"
+        },
+        "method": "POST",
+        "header": [
+          {
+            "key": "Authorization",
+            "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjZhMDAzYWUxNWFmZDcxYjhkZDZiZTUzMiIsIm5hbWUiOiJTbWl0aCIsImVtYWlsIjoic21pdGhAZ21haWwuY29tIiwicGhvbmUiOjkzNDI4MTYyNzM4LCJyb2xlIjoibWFuYWdlciIsImlhdCI6MTc3ODM5OTk4MywiZXhwIjoxNzc4NDg2MzgzfQ.kkYLbUSFreN1mVowcN6gFcXseh7I_M60KcQk4zNNWf8",
+            "type": "text"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n  \"title\": \"Database Integration\",\r\n  \"description\": \"Connect MongoDB with Express server using Mongoose\"\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:4013/task/create-task",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "4013",
+          "path": [
+            "task",
+            "create-task"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "http://localhost:4013/task/assign-task",
+      "request": {
+        "auth": {
+          "type": "noauth"
+        },
+        "method": "PUT",
+        "header": [
+          {
+            "key": "Authorization",
+            "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjZhMDAzMWEzNDhiM2Y0YjE0YmNlYzJlYiIsIm5hbWUiOiJXaWxsIiwiZW1haWwiOiJ3aWxsQGdtYWlsLmNvbSIsInBob25lIjo5MzQ1MTYyNzM4LCJyb2xlIjoibWFuYWdlciIsImlhdCI6MTc3ODM5ODc0MiwiZXhwIjoxNzc4NDg1MTQyfQ.zmu4evPCqNCTswxj2eBOwD5v0zbQg8h1kLprPgMlTOE",
+            "type": "text"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n    \"taskId\": \"6a003b105afd71b8dd6be533\",\r\n    \"employeeId\": \"6a0031db48b3f4b14bcec2ec\"\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:4013/task/assign-task",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "4013",
+          "path": [
+            "task",
+            "assign-task"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "http://localhost:4013/task/my-task",
+      "protocolProfileBehavior": {
+        "disableBodyPruning": true
+      },
+      "request": {
+        "auth": {
+          "type": "noauth"
+        },
+        "method": "GET",
+        "header": [
+          {
+            "key": "Authorization",
+            "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjZhMDAzMWRiNDhiM2Y0YjE0YmNlYzJlYyIsIm5hbWUiOiJCcnVjZSIsImVtYWlsIjoiYnJ1Y2VAZ21haWwuY29tIiwicGhvbmUiOjkzNDI4MTYyNzM4LCJyb2xlIjoiZW1wbG95ZWUiLCJpYXQiOjE3Nzg0MDA0MTYsImV4cCI6MTc3ODQ4NjgxNn0.W8bRyRXUkvjYqPrDnxPybFJOKOFVCXHwsHbYOLF5w80",
+            "type": "text"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n    \"taskId\": \"6a003b105afd71b8dd6be533\",\r\n    \"employeeId\": \"6a0031db48b3f4b14bcec2ec\"\r\n}"
+        },
+        "url": {
+          "raw": "http://localhost:4013/task/my-task",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "4013",
+          "path": [
+            "task",
+            "my-task"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "http://localhost:4013/task/update-progress",
+      "request": {
+        "auth": {
+          "type": "noauth"
+        },
+        "method": "PUT",
+        "header": [
+          {
+            "key": "Authorization",
+            "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY5ZmYwNzA0YzAxMWExZTQ0M2YyZmMxZSIsIm5hbWUiOiJKb2huIiwiZW1haWwiOiJqb2huQGdtYWlsLmNvbSIsInBob25lIjo3OTcyOTAyMTIxLCJyb2xlIjoiZW1wbG95ZWUiLCJpYXQiOjE3Nzg0MDEwNjQsImV4cCI6MTc3ODQ4NzQ2NH0.qlLcdcKiQusRtZMfpo1oZI2Wu57_s1SDFBvi3J41uvk",
+            "type": "text"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n    \"taskId\": \"6a0036808603d6ad2f2c8be0\",\r\n    \"progress\": \"55\"\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:4013/task/update-progress",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "4013",
+          "path": [
+            "task",
+            "update-progress"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "http://localhost:4013/task/file-upload",
+      "request": {
+        "auth": {
+          "type": "noauth"
+        },
+        "method": "PUT",
+        "header": [
+          {
+            "key": "Authorization",
+            "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjZhMDAzMWRiNDhiM2Y0YjE0YmNlYzJlYyIsIm5hbWUiOiJCcnVjZSIsImVtYWlsIjoiYnJ1Y2VAZ21haWwuY29tIiwicGhvbmUiOjkzNDI4MTYyNzM4LCJyb2xlIjoiZW1wbG95ZWUiLCJpYXQiOjE3Nzg0MDM0MTAsImV4cCI6MTc3ODQ4OTgxMH0.jdWJEnDUPSIXxqTeAg3eWjpuui3wvoqb7UxQXWGU-b0",
+            "type": "text"
+          }
+        ],
+        "body": {
+          "mode": "formdata",
+          "formdata": [
+            {
+              "key": "taskId",
+              "value": "6a003b105afd71b8dd6be533",
+              "type": "text",
+              "uuid": "f8e2144f-baaf-44af-99cd-cd975c8a5a0a"
+            },
+            {
+              "key": "file",
+              "type": "file",
+              "uuid": "605ff0f6-fde7-42f3-b2eb-6a4157867d08",
+              "src": "/C:/Users/rakti/Downloads/photo-1574700957706-31f0635ac41c.avif"
+            }
+          ]
+        },
+        "url": {
+          "raw": "http://localhost:4013/task/file-upload",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "4013",
+          "path": [
+            "task",
+            "file-upload"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "http://localhost:4013/task/complete-progress/6a003a635afd71b8dd6be531",
+      "request": {
+        "auth": {
+          "type": "noauth"
+        },
+        "method": "PUT",
+        "header": [
+          {
+            "key": "Authorization",
+            "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjZhMDAzMWRiNDhiM2Y0YjE0YmNlYzJlYyIsIm5hbWUiOiJCcnVjZSIsImVtYWlsIjoiYnJ1Y2VAZ21haWwuY29tIiwicGhvbmUiOjkzNDI4MTYyNzM4LCJyb2xlIjoiZW1wbG95ZWUiLCJpYXQiOjE3Nzg0MDQzNTksImV4cCI6MTc3ODQ5MDc1OX0.xd7gg-5fRrIR00J32ezXT1flaBty0LkoaSueaNP2B_Q",
+            "type": "text"
+          }
+        ],
+        "body": {
+          "mode": "formdata",
+          "formdata": []
+        },
+        "url": {
+          "raw": "http://localhost:4013/task/complete-progress/6a003a635afd71b8dd6be531",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "4013",
+          "path": [
+            "task",
+            "complete-progress",
+            "6a003a635afd71b8dd6be531"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "http://localhost:4013/task/track-progress",
+      "request": {
+        "method": "GET",
+        "header": [
+          {
+            "key": "Authorization",
+            "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjZhMDAzYWUxNWFmZDcxYjhkZDZiZTUzMiIsIm5hbWUiOiJTbWl0aCIsImVtYWlsIjoic21pdGhAZ21haWwuY29tIiwicGhvbmUiOjkzNDI4MTYyNzM4LCJyb2xlIjoibWFuYWdlciIsImlhdCI6MTc3ODQwNDcxNCwiZXhwIjoxNzc4NDkxMTE0fQ.6xeAWBFIXEYsXabQ_ruaY9mhqQw2zsQuUdD7r638kHg",
+            "type": "text"
+          }
+        ],
+        "url": {
+          "raw": "http://localhost:4013/task/track-progress",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "4013",
+          "path": [
+            "task",
+            "track-progress"
+          ]
+        }
+      },
+      "response": []
+    }
+  ]
+}
