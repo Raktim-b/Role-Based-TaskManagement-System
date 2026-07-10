@@ -5,11 +5,11 @@
 ## 🛠 Tech Stack
 
 <p align="center">
-  <img src="https://skillicons.dev/icons?i=nodejs,express,mongodb,javascript,npm,git,github,vscode,postman&perline=5" />
+<img src="https://skillicons.dev/icons?i=nodejs,express,mongodb,javascript,npm,git,github,vscode,postman&theme=light" />
 </p>
 
 <p align="center">
-  <img src="https://go-skill-icons.vercel.app/api/icons?i=jwt,multer,cloudinary,nodemailer" />
+<img src="https://go-skill-icons.vercel.app/api/icons?i=jwt,multer,cloudinary,nodemailer&theme=light" />
 </p>
 
 ---
