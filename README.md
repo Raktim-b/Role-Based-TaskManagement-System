@@ -4,7 +4,6 @@
 
 ## 🛠 Tech Stack
 
-<h2 align="center">🛠 Tech Stack</h2>
 
 <p align="center">
 <img src="https://skillicons.dev/icons?i=nodejs,express,mongodb,npm,git,javascript,github,vscode,postman&theme=dark" />
