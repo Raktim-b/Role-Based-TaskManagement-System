@@ -1,134 +1,119 @@
-[<div align="center">
+# 🚀 TaskForge – Role-Based Assignment Management System
 
-# 🚀 TaskForge
-### Enterprise Role-Based Assignment Management System (RBAC)
+> A secure, production-ready **Role-Based Assignment Management System** built with **Node.js, Express.js, MongoDB, and JWT Authentication**, designed to streamline task assignment, employee management, and team collaboration through enterprise-level Role-Based Access Control (RBAC).
 
-<img src="https://readme-typing-svg.herokuapp.com?font=Poppins&weight=600&size=22&pause=1000&color=0EA5E9&center=true&vCenter=true&width=600&lines=Production+Ready+Backend+Project;Node.js+%7C+Express.js+%7C+MongoDB;JWT+Authentication+%7C+RBAC;RESTful+API+Architecture" />
-
----
-
-A **production-level backend application** built with **Node.js**, **Express.js**, and **MongoDB** that enables organizations to securely manage employees, managers, and task assignments using **Role-Based Access Control (RBAC)**.
-
-Designed following enterprise backend architecture with secure authentication, authorization, file uploads, and scalable REST APIs.
-
-</div>
-
----
-
-## 🚀 Built With
-
-<p align="center">
-<img src="https://skillicons.dev/icons?i=nodejs,express,mongodb,javascript,npm,git,github,vscode,postman&perline=5" />
-</p>
-
-# 📖 Table of Contents
-
-- Project Overview
-- Features
-- Tech Stack
-- System Workflow
-- Folder Structure
-- Database Models
-- Authentication Flow
-- API Endpoints
-- Installation
-- Environment Variables
-- Security Features
-- Future Improvements
-- Author
+![Node.js](https://img.shields.io/badge/Node.js-339933?style=for-the-badge&logo=nodedotjs&logoColor=white)
+![Express](https://img.shields.io/badge/Express.js-000000?style=for-the-badge&logo=express&logoColor=white)
+![MongoDB](https://img.shields.io/badge/MongoDB-4DB33D?style=for-the-badge&logo=mongodb&logoColor=white)
+![JWT](https://img.shields.io/badge/JWT-black?style=for-the-badge&logo=jsonwebtokens)
+![Cloudinary](https://img.shields.io/badge/Cloudinary-3448C5?style=for-the-badge&logo=cloudinary&logoColor=white)
+![Nodemailer](https://img.shields.io/badge/Nodemailer-0F9D58?style=for-the-badge)
+![MVC](https://img.shields.io/badge/MVC-Architecture-success?style=for-the-badge)
 
 ---
 
 # 📌 Project Overview
 
-TaskForge is an enterprise-grade Assignment Management System where different users have different permissions according to their role.
+TaskForge is an enterprise-level backend application developed using **Node.js**, **Express.js**, and **MongoDB** that enables organizations to efficiently manage employees, managers, and task assignments.
 
-The application allows organizations to securely manage users and assign work while maintaining proper authorization and authentication.
+The application follows **Role-Based Access Control (RBAC)** to ensure that every user only has access to the resources and actions permitted by their role.
 
-There are **three different roles**:
-
-### 👑 Admin
-- Create Managers
-- Create Employees
-- View all users
-- Manage users
-- Delete users
-- View every task
-
-### 👨‍💼 Manager
-- Create Tasks
-- Assign Tasks
-- Update Task Details
-- Track Employee Progress
-
-### 👨‍💻 Employee
-- Login
-- View Assigned Tasks
-- Update Task Status
-- Upload Task Files
+The project demonstrates real-world backend architecture including authentication, authorization, task management, secure API development, email verification, and file uploads.
 
 ---
 
-# ✨ Features
+# 🚀 Business Problem
 
-## Authentication
+Imagine a software company with multiple departments and employees.
+
+Without a centralized task management system:
+
+- Managers struggle to assign work efficiently.
+- Employees lose track of assigned tasks.
+- Admins cannot monitor organizational progress.
+- Task ownership becomes unclear.
+- Deadlines are missed due to poor communication.
+
+TaskForge solves these challenges by providing a secure role-based platform where managers assign tasks, employees update progress, and administrators oversee the entire workflow.
+
+---
+
+# 👥 User Roles
+
+The application supports three user roles.
+
+| Role | Permissions |
+|------|-------------|
+| 👑 Admin | Full control over users, managers, employees, and tasks |
+| 👨‍💼 Manager | Create, assign, and monitor tasks |
+| 👨‍💻 Employee | View assigned tasks and update progress |
+
+---
+
+# ✨ Key Features
+
+## 🔐 Authentication
 
 - JWT Authentication
-- Secure Password Hashing
-- Login
-- Register
+- Password Hashing (bcrypt)
+- Secure Login
 - Email Verification
 - Protected Routes
+- Role-Based Authorization
 
 ---
 
-## Authorization (RBAC)
+## 👑 Admin Module
 
-Only authorized users can access specific APIs.
+The Admin can
 
-Example
-
-```
-Admin
-    ↓
-Create Manager
-
-Manager
-    ↓
-Assign Task
-
-Employee
-    ↓
-Update Task Status
-```
+- Create Managers
+- Create Employees
+- View All Users
+- Update User Information
+- Delete Users
+- View All Tasks
+- Manage Organization
 
 ---
 
-## User Management
+## 👨‍💼 Manager Module
 
-✔ Register Users
-
-✔ Login
-
-✔ Update Profile
-
-✔ Soft Delete Users
-
-✔ Role Management
-
-✔ User Status Management
-
----
-
-## Task Management
+Managers can
 
 - Create Tasks
-- Update Tasks
-- Delete Tasks
-- Assign Employees
-- Due Date
+- Assign Tasks
+- Set Priority
+- Set Due Dates
+- Update Task Details
+- Monitor Employee Progress
+
+---
+
+## 👨‍💻 Employee Module
+
+Employees can
+
+- Login Securely
+- View Assigned Tasks
+- Update Task Progress
+- Upload Task Attachments
+- Mark Tasks as Completed
+
+---
+
+## 📦 Task Management
+
+Each Task contains
+
+- Title
+- Description
+- Assigned By
+- Assigned To
 - Priority
-- Status Tracking
+- Due Date
+- Status
+- Attachments
 
 Task Status
 
@@ -137,7 +122,7 @@ Task Status
 - Completed
 - Rejected
 
-Priority
+Priority Levels
 
 - Low
 - Medium
@@ -146,9 +131,9 @@ Priority
 
 ---
 
-## File Upload
+## 📁 File Upload
 
-Employees can upload files related to assigned tasks.
+Employees can upload task-related documents.
 
 Uses
 
@@ -157,9 +142,89 @@ Uses
 
 ---
 
-## Email Verification
+## 📧 Email Verification
 
-Users verify their email before accessing protected resources.
+When a user registers
+
+✔ Verification email is sent
+
+✔ Account is activated after verification
+
+---
+
+# 🔄 Workflow
+
+```
+                👑 Admin
+                    │
+        Creates Managers & Employees
+                    │
+                    ▼
+              👨‍💼 Manager
+                    │
+          Creates & Assigns Tasks
+                    │
+                    ▼
+             👨‍💻 Employee
+                    │
+        Updates Progress & Uploads Files
+                    │
+                    ▼
+            👑 Admin Monitors Progress
+```
+
+---
+
+# 🏗 Database Design
+
+Collections
+
+- Users
+- Tasks
+
+Relationships
+
+```
+Admin
+   │
+Creates
+   │
+Manager
+   │
+Assigns
+   │
+Task
+   │
+Assigned To
+   │
+Employee
+```
+
+---
+
+# 🔐 Authentication Flow
+
+```
+Register
+      │
+      ▼
+Email Verification
+      │
+      ▼
+Login
+      │
+      ▼
+JWT Token Generated
+      │
+      ▼
+Protected Routes
+      │
+      ▼
+Role Verification
+      │
+      ▼
+Access Granted
+```
 
 ---
 
@@ -185,6 +250,10 @@ Users verify their email before accessing protected resources.
 - Multer
 - Cloudinary
 
+### Email
+
+- Nodemailer
+
 ### Security
 
 - CORS
@@ -196,72 +265,39 @@ Users verify their email before accessing protected resources.
 
 ---
 
-# 🧠 System Workflow
+# 📂 Project Structure
 
 ```
-                    Admin
-                      │
-          ┌───────────┴────────────┐
-          │                        │
-     Create Manager         Create Employee
-          │
-          ▼
-      Manager Login
-          │
-          ▼
-      Create Task
-          │
-          ▼
-    Assign to Employee
-          │
-          ▼
-     Employee Login
-          │
-          ▼
-     Update Progress
-          │
-          ▼
-     Upload Attachment
-          │
-          ▼
-     Complete Task
-```
-
----
-
-# 📂 Folder Structure
-
-```text
-app/
+app
 │
-├── config/
-│   ├── cloudinary.js
+├── config
 │   ├── db.js
+│   ├── cloudinary.js
 │   └── emailVerify.js
 │
-├── controller/
+├── controller
 │   ├── auth.controller.js
 │   ├── task.controller.js
 │   └── user.controller.js
 │
-├── middleware/
-│   ├── allowRoles.js
+├── middleware
 │   ├── auth.js
+│   ├── allowRoles.js
 │   └── fileUploades.js
 │
-├── model/
-│   ├── task.model.js
-│   └── userModel.js
+├── model
+│   ├── userModel.js
+│   └── task.model.js
 │
-├── routes/
+├── routes
 │   ├── auth.routes.js
-│   ├── task.routes.js
 │   ├── user.routes.js
+│   ├── task.routes.js
 │   └── index.js
 │
-├── utils/
-│   ├── httpStatusCode.js
-│   └── sendEmail.js
+├── utils
+│   ├── sendEmail.js
+│   └── httpStatusCode.js
 │
 ├── app.js
 │
@@ -275,273 +311,75 @@ package.json
 
 ---
 
-# 📁 Folder Explanation
+# 📌 API Modules
 
-## 📂 config
+## 🔐 Authentication
 
-Contains all application configuration files.
-
-| File | Purpose |
-|------|----------|
-| db.js | MongoDB Connection |
-| cloudinary.js | Cloudinary Configuration |
-| emailVerify.js | Email Verification Logic |
-
----
-
-## 📂 controller
-
-Contains business logic.
-
-### auth.controller.js
-
-- Register
+- Register User
 - Login
 - Verify Email
 
-### user.controller.js
+---
 
-- Create User
+## 👤 User
+
+- Create Manager
+- Create Employee
+- Get Users
 - Update User
 - Delete User
 
-### task.controller.js
+---
+
+## 📦 Task
 
 - Create Task
+- Assign Task
 - Update Task
 - Delete Task
-- Assign Task
+- Get Task Details
+- Update Task Status
 
 ---
 
-## 📂 middleware
+# 📬 Postman Collection
 
-Contains middleware functions.
-
-### auth.js
-
-Verifies JWT Token.
-
-### allowRoles.js
-
-Restricts API access based on user role.
-
-Example
+A complete Postman collection is included for testing all APIs.
 
 ```
-allowRoles("admin")
-```
-
-or
-
-```
-allowRoles("admin","manager")
-```
-
-### fileUploades.js
-
-Handles file uploads using Multer.
-
----
-
-## 📂 model
-
-Contains MongoDB Schemas.
-
-### User
-
-Stores
-
-- Name
-- Email
-- Password
-- Role
-- Status
-
-### Task
-
-Stores
-
-- Title
-- Description
-- Assigned By
-- Assigned To
-- Priority
-- Status
-- Due Date
-
----
-
-## 📂 routes
-
-Defines all API routes.
-
-```
-Authentication APIs
-
-User APIs
-
-Task APIs
+Postman-Response/
 ```
 
 ---
 
-## 📂 utils
+# ▶️ Installation
 
-Reusable helper functions.
-
-### sendEmail.js
-
-Sends verification emails.
-
-### httpStatusCode.js
-
-Stores all HTTP status codes.
-
----
-
-# 🔐 Authentication Flow
-
-```
-Register
-    │
-    ▼
-Hash Password
-    │
-    ▼
-Save User
-    │
-    ▼
-Send Verification Email
-    │
-    ▼
-Verify Email
-    │
-    ▼
-Login
-    │
-    ▼
-Generate JWT
-    │
-    ▼
-Access Protected Routes
-```
-
----
-
-# 🗄 Database Models
-
-## User
-
-```javascript
-{
-    name,
-    email,
-    password,
-    role,
-    phone,
-    avatar,
-    status,
-    isDeleted
-}
-```
-
----
-
-## Task
-
-```javascript
-{
-    title,
-    description,
-    assignedBy,
-    assignedTo,
-    priority,
-    status,
-    dueDate,
-    attachments
-}
-```
-
----
-
-# 🌐 API Endpoints
-
-## Authentication
-
-| Method | Endpoint |
-|----------|--------------------|
-| POST | /auth/register |
-| POST | /auth/login |
-| GET | /auth/verify |
-
----
-
-## Users
-
-| Method | Endpoint |
-|----------|----------------|
-| GET | /users |
-| GET | /users/:id |
-| PUT | /users/:id |
-| DELETE | /users/:id |
-
----
-
-## Tasks
-
-| Method | Endpoint |
-|----------|----------------|
-| GET | /tasks |
-| GET | /tasks/:id |
-| POST | /tasks |
-| PUT | /tasks/:id |
-| DELETE | /tasks/:id |
-
----
-
-# ⚙ Installation
-
-Clone Repository
+Clone the repository
 
 ```bash
-git clone https://github.com/yourusername/taskforge.git
+git clone <repository-url>
 ```
 
-Install Dependencies
+Install dependencies
 
 ```bash
 npm install
 ```
 
-Run Development Server
-
-```bash
-npm run dev
-```
-
-Production
-
-```bash
-npm start
-```
-
----
-
-# 🔑 Environment Variables
+Create a `.env` file
 
 ```env
 PORT=5000
 
-MONGO_URI=
+MONGO_URI=your_mongodb_connection
 
-JWT_SECRET=
+JWT_SECRET=your_jwt_secret
 
-JWT_REFRESH_SECRET=
+JWT_REFRESH_SECRET=your_refresh_secret
 
-EMAIL=
+EMAIL=your_email
 
-EMAIL_PASSWORD=
+EMAIL_PASSWORD=your_email_password
 
 CLOUDINARY_CLOUD_NAME=
 
@@ -550,56 +388,78 @@ CLOUDINARY_API_KEY=
 CLOUDINARY_API_SECRET=
 ```
 
+Start the server
+
+```bash
+npm run dev
+```
+
 ---
 
 # 🔒 Security Features
 
 - JWT Authentication
 - Password Hashing
-- Role Based Authorization
-- Protected Routes
+- Role-Based Authorization (RBAC)
+- Protected APIs
 - Environment Variables
-- Input Validation
+- Email Verification
 - Secure File Upload
-- Cloudinary Storage
+- Cloudinary Integration
+
+---
+
+# 💡 Skills Demonstrated
+
+- REST API Development
+- Authentication & Authorization
+- JWT Authentication
+- RBAC (Role-Based Access Control)
+- MongoDB Relationships
+- CRUD Operations
+- MVC Architecture
+- Email Verification
+- File Upload
+- Cloudinary Integration
+- Middleware Development
+- Express.js Routing
+- Production Folder Structure
+- Environment Variable Management
 
 ---
 
 # 🚀 Future Improvements
 
-- Refresh Tokens
+- Refresh Token Rotation
 - Dashboard Analytics
-- Notifications
-- Pagination
+- Assignment History
 - Search & Filtering
+- Pagination
 - Redis Caching
-- Swagger Documentation
+- Swagger API Documentation
 - Jest Testing
 - Docker Deployment
 - CI/CD Pipeline
 - WebSocket Notifications
+- Team Chat
+- Calendar Integration
 
 ---
 
-# 📈 Learning Outcomes
+# 📖 Learning Outcomes
 
-✔ REST API Development
+Building TaskForge helped me understand
 
-✔ Authentication
-
-✔ Authorization
-
-✔ MongoDB Relationships
-
-✔ Express Middleware
-
-✔ MVC Architecture
-
-✔ File Upload
-
-✔ Email Verification
-
-✔ Production Backend Structure
+- Enterprise Backend Architecture
+- Authentication & Authorization
+- Role-Based Access Control
+- Express Middleware
+- MongoDB Relationships
+- REST API Development
+- Email Verification
+- File Upload Handling
+- Secure API Design
+- Real-world Workflow Management
 
 ---
 
@@ -609,17 +469,10 @@ CLOUDINARY_API_SECRET=
 
 Backend Developer
 
-Node.js • Express.js • MongoDB
+### 💻 Tech Stack
 
-If you found this project helpful, don't forget to ⭐ the repository.
+Node.js • Express.js • MongoDB • JavaScript • REST APIs
+
+If you found this project helpful, don't forget to ⭐ star the repository.
 
 ---
-
-<div align="center">
-
-### ⭐ Star this repository if you found it useful!
-
-Made with ❤️ using Node.js & MongoDB
-
-</div>
-](https://github.com/Raktim-b/Role-Based-TaskManagement-System.git)
