@@ -15,6 +15,28 @@ Designed following enterprise backend architecture with secure authentication, a
 
 ---
 
+## 🚀 Built With
+
+<p align="center">
+
+<img src="https://skillicons.dev/icons?i=nodejs,express,mongodb,js,npm,git,github,vscode,postman" /><br><br>
+
+<img src="https://img.shields.io/badge/JWT-Authentication-black?style=for-the-badge&logo=jsonwebtokens"/>
+
+<img src="https://img.shields.io/badge/MVC-Architecture-success?style=for-the-badge"/>
+
+<img src="https://img.shields.io/badge/RBAC-Authorization-red?style=for-the-badge"/>
+
+<img src="https://img.shields.io/badge/Multer-File%20Upload-orange?style=for-the-badge"/>
+
+<img src="https://img.shields.io/badge/Cloudinary-3448C5?style=for-the-badge&logo=cloudinary&logoColor=white"/>
+
+<img src="https://img.shields.io/badge/Nodemailer-Email-green?style=for-the-badge"/>
+
+<img src="https://img.shields.io/badge/REST-API-blue?style=for-the-badge"/>
+
+</p>
+
 # 📖 Table of Contents
 
 - Project Overview
