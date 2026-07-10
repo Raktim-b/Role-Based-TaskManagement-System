@@ -8,10 +8,12 @@
 
 <p align="center">
 <img src="https://skillicons.dev/icons?i=nodejs,express,mongodb,npm,git,github,vscode,postman&theme=dark" />
-</p>
+<br><br>
 
-<p align="center">
-<img src="https://go-skill-icons.vercel.app/api/icons?i=jwt,multer,cloudinary,nodemailer&theme=dark" />
+<img src="https://cdn.simpleicons.org/jsonwebtokens/000000" height="48" alt="JWT" />
+<img src="https://cdn.simpleicons.org/cloudinary/3448C5" height="48" alt="Cloudinary" />
+<img src="https://www.vectorlogo.zone/logos/nodemailer/nodemailer-icon.svg" height="48" alt="Nodemailer" />
+  
 </p>
 
 ---
