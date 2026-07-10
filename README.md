@@ -9,8 +9,7 @@
 <p align="center">
 <img src="https://skillicons.dev/icons?i=nodejs,express,mongodb,npm,git,javascript,github,vscode,postman&theme=dark" />
 
-  
-<br><br>
+
 
 <img src="https://img.shields.io/badge/JWT-black?style=flat-square&logo=jsonwebtokens" />
 <img src="https://img.shields.io/badge/Cloudinary-3448C5?style=flat-square&logo=cloudinary&logoColor=white" />
