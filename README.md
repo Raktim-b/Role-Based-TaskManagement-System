@@ -470,7 +470,7 @@ Building TaskForge helped me understand
 
 # 👨‍💻 Author
 
-**Srinu**
+**Raktim Bhattacharya**
 
 Backend Developer
 
