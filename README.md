@@ -2,13 +2,15 @@
 
 > A secure, production-ready **Role-Based Assignment Management System** built with **Node.js, Express.js, MongoDB, and JWT Authentication**, designed to streamline task assignment, employee management, and team collaboration through enterprise-level Role-Based Access Control (RBAC).
 
-![Node.js](https://img.shields.io/badge/Node.js-339933?style=for-the-badge&logo=nodedotjs&logoColor=white)
-![Express](https://img.shields.io/badge/Express.js-000000?style=for-the-badge&logo=express&logoColor=white)
-![MongoDB](https://img.shields.io/badge/MongoDB-4DB33D?style=for-the-badge&logo=mongodb&logoColor=white)
-![JWT](https://img.shields.io/badge/JWT-black?style=for-the-badge&logo=jsonwebtokens)
-![Cloudinary](https://img.shields.io/badge/Cloudinary-3448C5?style=for-the-badge&logo=cloudinary&logoColor=white)
-![Nodemailer](https://img.shields.io/badge/Nodemailer-0F9D58?style=for-the-badge)
-![MVC](https://img.shields.io/badge/MVC-Architecture-success?style=for-the-badge)
+## 🛠 Tech Stack
+
+<p align="center">
+  <img src="https://skillicons.dev/icons?i=nodejs,express,mongodb,javascript,npm,git,github,vscode,postman&perline=5" />
+</p>
+
+<p align="center">
+  <img src="https://go-skill-icons.vercel.app/api/icons?i=jwt,multer,cloudinary,nodemailer" />
+</p>
 
 ---
 
