@@ -7,9 +7,15 @@
 <h2 align="center">🛠 Tech Stack</h2>
 
 <p align="center">
-<img src="https://skillicons.dev/icons?i=nodejs,express,mongodb,npm,git,javascript,jwt,github,vscode,postman&theme=dark" />
+<img src="https://skillicons.dev/icons?i=nodejs,express,mongodb,npm,git,javascript,github,vscode,postman&theme=dark" />
 
   
+<br><br>
+
+<img src="https://img.shields.io/badge/JWT-black?style=flat-square&logo=jsonwebtokens" />
+<img src="https://img.shields.io/badge/Cloudinary-3448C5?style=flat-square&logo=cloudinary&logoColor=white" />
+<img src="https://img.shields.io/badge/Nodemailer-Email-success?style=flat-square" />
+<img src="https://img.shields.io/badge/Multer-File%20Upload-orange?style=flat-square" />
 </p>
 
 ---
