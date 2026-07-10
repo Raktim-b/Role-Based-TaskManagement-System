@@ -4,12 +4,24 @@
 
 ## 🛠 Tech Stack
 
+💻 Backend
 <p align="center">
-<img src="https://skillicons.dev/icons?i=nodejs,express,mongodb,javascript,npm,git,github,vscode,postman&theme=light" />
+<img src="https://skillicons.dev/icons?i=nodejs,express,javascript,npm" />
 </p>
 
+🍃 Database
 <p align="center">
-<img src="https://go-skill-icons.vercel.app/api/icons?i=jwt,multer,cloudinary,nodemailer&theme=light" />
+<img src="https://skillicons.dev/icons?i=mongodb" />
+</p>
+
+☁️ Services
+<p align="center">
+<img src="https://go-skill-icons.vercel.app/api/icons?i=jwt,multer,cloudinary,nodemailer" />
+</p>
+
+🧰 Tools
+<p align="center">
+<img src="https://skillicons.dev/icons?i=git,github,vscode,postman" />
 </p>
 
 ---
